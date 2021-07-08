@@ -1,0 +1,36 @@
+.row{
+    background-color: burlywood;
+}
+.userprofile{
+    background-color: cadetblue !important;
+}
+.row .profilecard{
+    background-color: chartreuse !important;
+}
+.contact{
+    background-color: crimson !important;
+}
+.input{
+    background-color: cyan;
+}
+.details{
+    background-color: darkgoldenrod;
+}
+.detailbox{
+    display: flex;
+    padding: 0;
+    background-color: blue;
+}
+.details .detailbox .box1{
+    background-color: cornsilk;
+    padding: 0;
+}
+.details .detailbox .box2{
+    background-color: hotpink;
+}
+.buttonbox{
+    background-color: darkmagenta;
+    display: flex;
+    flex-direction: column;
+}
+

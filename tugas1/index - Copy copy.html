@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+          padding: 0px;
+          margin: 0px;
+        }
+        #container{
+          background-color: red;
+        }
+    </style>
+</head>
+<body>
+  <div id="container">
+    <h1 id="h1">Hello world</h1>
+    <button onclick="changebg()">change background</button>
+    <button id="h1change">changeh1</button>
+    <div id="contoh1">
+      <h1>heading 1</h1>
+      <p>pargraf</p>
+      <strong>strong</strong>
+    </div>
+    <button onclick="changecontoh1()">changeH1</button>
+  </div>
+</body>
+</html>
+
+<script>
+  let status = true
+  const changebg = ()=>{
+    status =!status
+    console.log(status)
+    if(status === true){
+      document.getElementById("container").style = `background-color: blue;`
+    }
+    else{
+      document.getElementById("container").style = `background-color: red;`
+    }
+  }
+  document.getElementById("h1change").addEventListener('click', ()=>{
+    document.getElementById("h1").innerHTML = "hello"
+  })
+  const changecontoh1 = ()=>{
+    document.getElementById("contoh1").innerHTML = "<h4>heading 4</h4>"
+  }
+</script>
