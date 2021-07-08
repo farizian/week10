@@ -1,8 +1,32 @@
 .row{
     background-color: burlywood;
 }
+
 .userprofile{
+    height: 600px;
+    display: flex;
+    margin: 0;
+    padding: 0;
     background-color: cadetblue !important;
+}
+.userprofile .sidebar{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+    width: 8%;
+    height: 100%;
+}
+.userprofile .sidebar .fork{
+    width: 35px;
+    height: 35px;
+    margin-top: 30px;
+    margin-bottom: 50px;
+}
+.userprofile .sidebar .clip{
+    width: 35px;
+    height: 35px;
+    margin-bottom: 50px;
 }
 .row .profilecard{
     background-color: chartreuse !important;

@@ -8,228 +8,101 @@ body{
 
 .navbar{
     display: flex;
-    border-bottom: 2px solid #eeeeee;
+    border-bottom: 2px solid #dddcdc;
     width: 100%;
     margin: 0;
     padding: 0;
+    align-items: flex-end;
+    justify-content: flex-end;
+}
+.navbar .nav{
+    height: 60px;
+    border-right: 2px solid #CECECE;
+}
+.navbar .navi{
+    height: 60px;
 }
 .bar{
-    background-color: #ffba33 !important;
+    color: black !important;
+    border: none !important;
+    margin-left: 1%;
 }
 .bar .baricon{
-    color: #6a4029 !important;
-}
-.coffeelogo{
     display: flex;
-    align-items: flex-start;
-    justify-content: flex-start;
-    cursor: pointer;
-    transition-duration: 50ms;
-    margin-left: 7%;
 }
-.coffeelogo:hover{
-    font-weight: 600;
+.logo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+input[type="checkbox"]{
+    display: none;
+}
+.box{
+    /* position: absolute; */
+    display: flex;
+    width: 50px;
+    height: 50px;
+    transition: .5s;
+}
+.box label i{
+    position: absolute;
+    bottom: 7px;
+    right: 8px;
+}
+.box label{
+    position: absolute;
+    top: 10px;
+    left: 62%;
+    width: 40px;
+    height: 40px;
+    line-height: 60px;
+    border-radius: 50%;
+    text-align: center;
+    color: gray;
+    font-size: 23px;
+    cursor: pointer;
+    transition: .5s;
+}
+.box label:hover{
+    box-shadow: -10px -10px 15px #edeff1, 10px 10px 15px #cacfd8;
     transform: scale(1.1);
 }
-.coffeelogo img{
-    width: 25px;
-    height: 25px;
-}
-.coffeelogo h1{
-    font-size: 15px;
-    font-weight: 800;
-    position: relative;
-    left: 11px;
-    margin-top: 7px;
-    color: #6a4029 !important;
-}
-.navbar .navmenu{
-    margin: 0;
-    padding: 0;
-    width: 80%;
-    justify-content: center;
-}
-.navbar .navmenu .primary-menu{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    list-style-type: none;
-    margin-left: 15%;
-    width: 400px;
-}
-.navbar .navmenu .primary-menu .menu1{
-    margin: 15px 0 15px 0;
-    font-size: 13px;
-    font-weight: 400;
-    color: #4f5665;
-    cursor: pointer;
-    text-align: center;
+.box input{
     width: 100%;
+    height: 100%;
+    background-color: transparent;
+    border: none;
+    border-radius: 30px;
+    outline: none;
+    font-size: 19px;
+    padding-left: 20px;
+    color: gray;
+    transition: .5s;
+    opacity: 0;
 }
-.navbar .navmenu .primary-menu .menu1:hover{
-    color: #6a4029;
-    font-weight: 700;
+.box input:focus{
+    box-shadow: -10px -10px 40px #edeff1, 10px 10px 40px #cacfd8;
 }
-.navbar .secondary-menu{
-    width: 40%;
+#check:checked+.box{
+    width: 200px;
 }
-.navbar .secondary-menu .menu{
-    width: 100%;
+#check:checked+.box > input{
+    opacity: 1;
+}
+#check:checked+.box > label{
+    box-shadow: none;
+}
+#check:checked+.box > label:hover{
+    transform: scale(1);
+}
+.cart{
     display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    list-style-type: none;
-    margin-left: 20%;
-}
-.navbar .secondary-menu .menu .search{
-    width: 40%;
-    height: 30px;
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    cursor: pointer;
-    margin-right: 6%;
+    padding-left: 47%;
+    /* padding-right: 100px;
+    margin-right: 7%;
+    margin-left: -305px; */
+    border-left: 10px blue;
 }
 
-.navbar .secondary-menu .menu .search .srch{
-    margin-left: 5%;
-    width: 20px;
-    height: 20px;
-}
-.navbar .secondary-menu .menu .chat{
-    height: 30px;
-    width: 35px;
-    padding: 5px;
-    margin-right: 5%;
-    cursor: pointer;
-}
-.navbar .secondary-menu .menu .profile{
-    cursor: pointer;
-}
-.navbar .secondary-menu .menu .chat img{
-    margin-left: 2px;
-}
-.navbar .secondary-menu .menu .chat:hover{
-    font-weight: 600;
-    transform: scale(1.1);
-}
-.navbar .secondary-menu .menu .profile:hover{
-    font-weight: 600;
-    transform: scale(1.1);
-}
-.navbar .secondary-menu .menu .chat .notif{
-    background-color: #6A4029;
-    width: 12px;
-    height: 12px;
-    border-radius: 100px;
-    color: white;
-    font-size: 10px;
-    font-weight: 800;
-    font-family: sans-serif;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-top: -28px;
-    margin-left: -5px;
-}
-@media screen and (max-width: 768px){
-    .navbar{
-        border-bottom: 2px solid #eeeeee;
-        width: 100%;
-        margin: 0;
-        padding: 0;
-        padding-top: 5px;
-        padding-bottom: 5px;
-    }
-    .navbar .container-fluid{
-        margin: 0;
-        padding: 0;
-    }
-    .bar{
-        background-color: #ffba33 !important;
-        margin-right: 5%;
-    }
-    .bar .baricon{
-        color: #6a4029 !important;
-    }
-    .coffeelogo{
-        display: flex;
-        align-items: flex-start;
-        justify-content: flex-start;
-        cursor: pointer;
-        transition-duration: 50ms;
-        margin-left: 7%;
-    }
-    .coffeelogo:hover{
-        font-weight: 600;
-        transform: scale(1.1);
-    }
-    .coffeelogo img{
-        width: 25px;
-        height: 25px;
-    }
-    .coffeelogo h1{
-        font-size: 15px;
-        font-weight: 800;
-        position: relative;
-        left: 11px;
-        margin-top: 7px;
-        color: #6a4029 !important;
-    }
-    .navbar .navmenu{
-        margin: 0;
-        padding: 0;
-        width: 100%;
-        margin-top: 10px;
-        background-color: white;
-    }
-    .navbar .navmenu .primary-menu{
-        list-style-type: none;
-        margin-left: 0;
-        width: 100%;
-        display: flex;
-    }
-    .navbar .navmenu .primary-menu .menu1{
-        margin: 0;
-        font-size: 13px;
-        font-weight: 400;
-        color: #4f5665;
-        cursor: pointer;
-        text-align: center;
-        width: 100%;
-    }
-    .navbar .navmenu .primary-menu .menu1:hover{
-        color: #6a4029;
-        font-weight: 700;
-    }
-    .navbar .navmenu .primary-menu .menu1 a{
-        margin-left: 10px;
-    }
-    .navbar .navmenu .primary-menu .menu1 a{
-        margin-left: 50px;
-    }
-    .navbar .navmenu .secondary-menu{
-        width: 100%;
-        height: 50px;
-        padding-left: 10%;
-        justify-content: flex-start;
-    }
-    .navbar .navmenu .secondary-menu .menu{
-        margin-top: 10px;
-        margin-left: 0;
-    }
-    .navbar .navmenu .secondary-menu .menu .search{
-        width: 60%;
-    }
-    .navbar .navmenu .secondary-menu .menu .search input{
-        width: 100%;
-    }
-}
-@media screen and (max-width: 576px) {
-    .navbar .navmenu .primary-menu .menu1 a{
-        margin-left: 10px;
-    }
-    .navbar .navmenu .secondary-menu{
-        padding-left: 0;
-    }
-}
+
