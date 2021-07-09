@@ -1,60 +1,85 @@
 .row{
-    background-color: burlywood;
+
 }
 
-.userprofile{
-    height: 600px;
+.itemmenu{
+    height: 100%;
     display: flex;
     margin: 0;
     padding: 0;
     background-color: cadetblue !important;
 }
-.userprofile .sidebar{
+.itemmenu .sidebar{
     display: flex;
     flex-direction: column;
     align-items: center;
     background-color: white;
-    width: 8%;
-    height: 100%;
+    width: 10%;
+    height: 100vh;
 }
-.userprofile .sidebar .fork{
+.itemmenu .sidebar .fork{
     width: 35px;
     height: 35px;
     margin-top: 30px;
     margin-bottom: 50px;
+    cursor: pointer;
 }
-.userprofile .sidebar .clip{
+.itemmenu .sidebar .clip{
     width: 35px;
     height: 35px;
     margin-bottom: 50px;
+    cursor: pointer;
 }
-.row .profilecard{
-    background-color: chartreuse !important;
-}
-.contact{
-    background-color: crimson !important;
-}
-.input{
-    background-color: cyan;
-}
-.details{
-    background-color: darkgoldenrod;
-}
-.detailbox{
+.itemmenu .product{
     display: flex;
-    padding: 0;
-    background-color: blue;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    background-color: coral;
+
 }
-.details .detailbox .box1{
-    background-color: cornsilk;
-    padding: 0;
-}
-.details .detailbox .box2{
-    background-color: hotpink;
-}
-.buttonbox{
-    background-color: darkmagenta;
+.itemmenu .product .prd{
     display: flex;
     flex-direction: column;
+    background-color: cyan;
+    margin: 20px;
 }
+.itemmenu .product .prd img{
+    width: 220px;
+    height: 160px;
+}
+.itemmenu .product .prd .itemname{
+    font-size: 15px;
+    font-weight: 500;
+}
+.itemmenu .product .prd .itemprice{
+    font-size: 15px;
+    font-weight: 800;
+}
+.row .profilecard{
+    display: flex;
+    justify-content: center;
+}
+.profilecard .empty{
+    display: flex;
+    margin-top: 50px;
+    flex-direction: column;
+    align-items: center;
 
+}
+.profilecard .empty .cup{
+    width: 200px;
+    height: 200px;
+    margin-bottom: -30px;
+
+}
+.profilecard .empty h3{
+    font-size: 27px;
+    font-weight: 600;
+}
+.profilecard .empty p{
+    font-size: 20px;
+    font-weight: 500;
+    color: #CECECE;
+}

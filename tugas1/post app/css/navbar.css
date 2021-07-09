@@ -1,9 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Rubik:wght@300;400;500;600;700;800;900&display=swap');
+@import url('http://fonts.cdnfonts.com/css/airbnb-cereal-app');
 
 body{
     margin: 0px;
     padding: 0px;
-    font-family: poppins;
+    font-family: 'Airbnb Cereal App', sans-serif;
 }
 
 .navbar{
@@ -34,6 +34,8 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
+    font-size: 23px;
+    font-weight: 600;
 }
 input[type="checkbox"]{
     display: none;
@@ -102,7 +104,8 @@ input[type="checkbox"]{
     /* padding-right: 100px;
     margin-right: 7%;
     margin-left: -305px; */
-    border-left: 10px blue;
+    font-size: 20px;
+    font-weight: 600;
 }
 
 

@@ -7,8 +7,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
-    <!--Font awesome css-->
-    <link rel="stylesheet" href="all.min.css">
     <!-- my css -->
     <link rel="stylesheet" href="./css/navbar.css">
     <link rel="stylesheet" href="./css/section.css">
@@ -16,7 +14,7 @@
     <title>posapp</title>
 </head>
 <body>
-  <nav class="navbar navbar-expand-xxl navbar-light bg-light">
+  <nav class="navbar navbar-expand-xxl navbar-light bg-white">
     <div class="container-fluid nav col-lg-8">
       <button class="navbar-toggler bar" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon baricon"></span>
@@ -46,28 +44,31 @@
       </div>
     </div>
     <div class="container-fluid navi col-lg-4">
-      <a class="navbar-brand cart" href="#">cart</a>
+      <a class="navbar-brand cart" href="#">Cart</a>
     </div>
   </nav>
   <section>
     <div class="container-fluid">
       <div class="row">
-        <div class="userprofile col-lg-8">
+        <div class="itemmenu col-lg-8">
           <div class="sidebar">
             <img class="fork" src="https://raw.githubusercontent.com/farizian/week10/master/tugas1/img/fork.png" alt="" srcset="">
             <img class="clip" src="https://raw.githubusercontent.com/farizian/week10/master/tugas1/img/clipboard.png" alt="" srcset="">
             <img class="clip" src="https://raw.githubusercontent.com/farizian/week10/master/tugas1/img/add.png" alt="" srcset="">
           </div>
-          <h1>data</h1>
+            <div id="items" class="product"></div>
         </div>
         <div class="profilecard col-lg-4">
-          <h1>dataa</h1>
+          <div class="empty">
+            <img class="cup" src="https://raw.githubusercontent.com/farizian/week10/master/tugas1/img/cupblank.png" alt="" srcset="">
+            <h3>Your cart is empty</h3>
+            <p>Please add some items from the menu</p>
+          </div>
         </div>
       </div>
 
     </div>
   </section>
-
 
 
 <!-- font awesome js -->
@@ -76,3 +77,6 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
 </body>
 </html>
+<!-- my js -->
+<script src="./js/data.js"></script>
+<script src="./js/product.js"></script>
