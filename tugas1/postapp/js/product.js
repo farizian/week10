@@ -71,33 +71,24 @@ const btnmin=(id)=>{
   itemcart()
   
 }
-const min = (id)=>{
-  const cartupdate = cart.map((e)=>{
-    if(e.id===id && e.qty>0){
-      return{
-        id: e.id,
-        picture: e.picture,
-        product_name: e.product_name,
-        price: e.price,
-        qty: e.qty-1,
-      }
-    }
-    else if(e.id===id && e.qty <=0){
-      e.splice(1)
-    }
-    else{
-      return e
-    }
-    
-  })
-  cart = cartupdate
-  
+const tampiltotal =()=>{
+  document.getElementById("tot").innerHTML =`
+  <div class="totalitem">
+    <div class="text">
+      <div class="text1">
+        <h1 class="titletotal">Total:</h1>
+        <p class="ppn">*Belum termasuk ppn</p>
+      </div>
+      <div class="text2">
+        <span class="number" id="nm" value="" >total</span>
+      </div>
+    </div>
+    <button  class="check">Checkout</button>
+    <button onclick="btndel()" class="cancel">Cancel</button>
+  </div>
+  `
 }
-
-const btndel=()=>{
-  cart.map((e)=>{
-    del(e.id)
-  })
+const gambarcadangan = ()=>{
   document.getElementById("cartitem").innerHTML =`
   <div class="empty" id="del">
     <img class="cup" src="https://raw.githubusercontent.com/farizian/week10/master/tugas1/img/cupblank.png" alt="" srcset="">
@@ -105,22 +96,44 @@ const btndel=()=>{
     <p>Please add some items from the menu</p>
   </div>
   `
-  
-  // itemcart()
-  // totalprice()
+}
+const min = (id)=>{
+  const i = cart.findIndex((x=> x.id == id))
+    if(cart[i].qty<=1){
+      cart.splice([min],1)
+      gambarcadangan()
+    }
+    else{
+      cart[i].qty -= 1
+    }
+    itemcart()
+}
+
+// const kosong =()=>{
+//   if(cart.length === 0){
+//     gambarcadangan
+//   }
+// }
+const btndel=()=>{
+  cart = []
+  itemcart()
+  totalprice()
+  if(cart.length === 0){
+    gambarcadangan()
+  }
   
 }
 
-const del =(id)=>{
-  const cartupdate = cart.filter((e)=>{
-    if(e.id !== id){
-      return e
-    }
-  })
-  cart = cartupdate
-  itemcart()
-  totalprice()
-}
+// const del =(id)=>{
+//   const cartupdate = cart.filter((e)=>{
+//     if(e.id !== id){
+//       return e
+//     }
+//   })
+//   cart = cartupdate
+//   itemcart()
+//   totalprice()
+// }
 // mencari data ganda dengan fungsi cartchecker
 const cartchecker = (id)=>{
   const findid = cart.find((item)=>{
@@ -128,18 +141,16 @@ const cartchecker = (id)=>{
       return item
     }
   })
+
   return findid
 }
 // total
 const totalprice =()=>{
-  var ttl = 0
-
-  cart.map((e)=>{
-    total = ttl + e.qty*e.price
-
-    document.getElementById("nm").innerText = `Rp.${total}*`
+  var total = 0
+  cart.forEach((e)=>{
+    total += e.qty*e.price
   })
-  // console.log(update)
+  document.getElementById("nm").innerText = `Rp.${total}*`
 }
 // menambahkan ke array cart
 const addcart = (id) => {
@@ -148,21 +159,21 @@ const addcart = (id) => {
             return e
         }
     })
-    const productqty = {
-      id: obj.id,
-      picture: obj.picture,
-      product_name: obj.product_name,
-      price: obj.price,
-      qty: 1,
-    }
     
     const check = cartchecker(id)
     if(check === undefined){
+      const productqty = {
+        id: obj.id,
+        picture: obj.picture,
+        product_name: obj.product_name,
+        price: obj.price,
+        qty: 1,
+      }
       cart.push(productqty) // mengisi array cart
     }else{
       add(id)
     }
-    
+    tampiltotal()
     itemcart() // memanggil fungsi itemcart
     totalprice()
     
