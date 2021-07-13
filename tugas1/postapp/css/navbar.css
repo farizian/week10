@@ -98,7 +98,7 @@ input[type="checkbox"]{
 #check:checked+.box > label:hover{
     transform: scale(1);
 }
-.cart{
+.cartitle{
     display: flex;
     padding-left: 47%;
     /* padding-right: 100px;
