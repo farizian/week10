@@ -12,25 +12,26 @@ product.forEach((e)=>{
 })
 // menampilkan cart
 const itemcart = ()=>{
-    document.getElementById("cartitem").innerHTML =""
-    cart.forEach((e)=>{
-      document.getElementById("cartitem").innerHTML +=
-      `<div class="cartprd" id="cartitem">
-        <img src="${e.picture}">
-        <div class="row">
-          <div class="cartname" id="nme">${e.product_name}</div>
-            <div class="btn">
-              <button onclick="btnadd(${e.id})" class="max">+</button>
-              <input class="qty" id="vl" type="number" value="${e.qty}">
-              <button onclick="btnmin(${e.id})" class="min">-</button>
-            </div>
-        </div>
-        <div class="row2">
-          <div class="cartprice">Rp.${e.price}</div>
-        </div>
+  document.getElementById("numcard").innerText = cart.length
+  document.getElementById("cartitem").innerHTML =""
+  cart.forEach((e)=>{
+    document.getElementById("cartitem").innerHTML +=
+    `<div class="cartprd" id="cartitem">
+      <img src="${e.picture}">
+      <div class="row">
+        <div class="cartname" id="nme">${e.product_name}</div>
+          <div class="btn">
+            <button onclick="btnmin(${e.id})" class="min">-</button>
+            <input class="qty" id="vl" type="string" value="${e.qty}">
+            <button onclick="btnadd(${e.id})" class="max">+</button>
+          </div>
       </div>
-      `
-    })
+      <div class="row2">
+        <div class="cartprice">Rp.${e.price}</div>
+      </div>
+    </div>
+    `
+  })
 }
 
 const btnadd=(id)=>{
@@ -85,6 +86,7 @@ const tampiltotal =()=>{
   `
 }
 const gambarcadangan = ()=>{
+  if(cart.length<=0){
   document.getElementById("cartitem").innerHTML =`
   <div class="empty" id="del">
     <img class="cup" src="https://raw.githubusercontent.com/farizian/week10/master/tugas1/img/cupblank.png" alt="" srcset="">
@@ -92,17 +94,24 @@ const gambarcadangan = ()=>{
     <p>Please add some items from the menu</p>
   </div>
   `
+  }
 }
 const min = (id)=>{
-  const i = cart.findIndex((x=> x.id == id))
+  const i = cart.findIndex((x=> x.id==id))
     if(cart[i].qty<=1){
-      cart.splice([min],1)
+      cart.splice([i],1)
     }
     else{
       cart[i].qty -= 1
     }
 }
-
+// const del=()=>{
+//   const cartupdate = cart.map((e)=>{
+//     cart.splice(e,1)
+//   })
+//   cart= cartupdate
+//   gambarcadangan()
+// }
 const btndel=()=>{
   cart = []
   itemcart()
@@ -153,9 +162,10 @@ const addcart = (id) => {
     itemcart() // memanggil fungsi itemcart
     totalprice()
 }
+
+// sidebar function
 let status = true
 const side =()=>{
-  
   if(status == false){
     document.getElementById("sb").style.left = "-250px";
     document.getElementById("items").style.paddingLeft = "0px";

@@ -20,7 +20,28 @@ body{
     border-right: 2px solid #CECECE;
 }
 .navbar .navi{
+    /* background-color: springgreen; */
+    display: flex;
     height: 60px;
+    justify-content: center;
+}
+.cartitle{
+    display: flex;
+    /* background-color: steelblue; */
+    margin-top: 10px;
+    font-size: 20px;
+    font-weight: 600;
+}
+.cartnum{
+    text-align: center;
+    font-size: 16px;
+    font-weight: 500;
+    margin-top: 10px;
+    margin-left: -8px;
+    width: 23px;
+    height: 23px;
+    color: white;
+    background-color: #57CAD5;
 }
 .bar{
     color: black !important;
@@ -98,14 +119,6 @@ input[type="checkbox"]{
 #check:checked+.box > label:hover{
     transform: scale(1);
 }
-.cartitle{
-    display: flex;
-    padding-left: 47%;
-    /* padding-right: 100px;
-    margin-right: 7%;
-    margin-left: -305px; */
-    font-size: 20px;
-    font-weight: 600;
-}
+
 
 

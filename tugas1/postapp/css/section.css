@@ -110,6 +110,8 @@
     font-family: 'Airbnb Cereal App', sans-serif;
     font-weight: 500;
     font-size: 20px;
+    margin-left: 10px;
+    /* background-color: yellow; */
 }
 .cart .cartid .cartprd .row .btn{
     display: flex;
@@ -118,6 +120,7 @@
     justify-content: flex-start;
     /* background-color: grey; */
     width: 100%;
+    margin-left: 10px;
     margin-right: 10px;
     margin-bottom: 10px;
 }
@@ -125,37 +128,36 @@
     align-items: center;
     text-align: center;
     width: 30px;
-    height: 35px;
+    height: 30px;
     border: 1px solid#82DE3A;
     color: #82DE3A;
     font-size: 20px;
-}
-.cart .cartid .cartprd .row .btn .max{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 30px;
-    height: 35px;
-    border: 1px solid#82DE3A;
-    color: #82DE3A;
-    margin-left: 10px;
-    font-size: 25px;
 }
 .cart .cartid .cartprd .row .btn .min{
     display: flex;
     align-items: center;
     justify-content: center;
     width: 30px;
-    height: 35px;
+    height: 30px;
+    border: 1px solid#82DE3A;
+    color: #82DE3A;
+    margin-left: 10px;
+    font-size: 25px;
+}
+.cart .cartid .cartprd .row .btn .max{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
     border: 1px solid#82DE3A;
     color: #82DE3A;
     font-size: 25px;
 }
 .cart .cartid .cartprd .row2{
-    width: 150px;
+    width: 160px;
     display: flex;
-    margin-left: 10px;
-    padding-right: 10px;
+    margin-left: -10px;
     align-items: flex-end;
     justify-content: flex-end;
     /* background-color: rgb(35, 114, 55); */
@@ -163,7 +165,7 @@
 .cart .cartid .cartprd .row2 .cartprice{
     font-size: 20px;
     font-weight: 500;
-
+    /* background-color: yellow; */
 }
 .cart .cartid .cartqty .empty{
     display: flex;
