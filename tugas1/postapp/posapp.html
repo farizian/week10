@@ -16,11 +16,11 @@
 <body>
   <nav class="navbar navbar-expand-xxl navbar-light bg-white">
     <div class="container-fluid nav col-lg-8">
-      <button class="navbar-toggler bar" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon baricon"></span>
+      <input type="checkbox" id="tag-menu">
+      <button class="navbar-toggler bar" type="button" onclick="side()">
+        <span class="navbar-toggler-icon baricon" ></span>
       </button>
       <a class="navbar-brand logo" href="#">Food Items</a>
-      <input type="checkbox" id="check">
       <div class="box">
           <input type="text" placeholder="Search">
           <label for="check"><i class="fas fa-search"></i>
@@ -36,12 +36,12 @@
     <div class="container-fluid">
       <div class="row">
         <div class="itemmenu col-lg-8">
-          <div class="sidebar">
+          <div class="sidebar" id="sb">
             <img class="fork" src="https://raw.githubusercontent.com/farizian/week10/master/tugas1/img/fork.png" alt="" srcset="">
             <img class="clip" src="https://raw.githubusercontent.com/farizian/week10/master/tugas1/img/clipboard.png" alt="" srcset="">
             <img class="clip" src="https://raw.githubusercontent.com/farizian/week10/master/tugas1/img/add.png" alt="" srcset="">
           </div>
-            <div id="items" class="product"></div>
+          <div id="items" class="product"></div>
         </div>
         <div class="cart col-lg-4">
             <div class="cartid">

@@ -1,22 +1,24 @@
-.row{
-
-}
-
 .itemmenu{
     height: 100%;
     display: flex;
     margin: 0;
     padding: 0;
-    /* background-color: cadetblue !important; */
+    background-color: cadetblue !important;
 }
+
 .itemmenu .sidebar{
+    position: fixed;
     display: flex;
     flex-direction: column;
     align-items: center;
     background-color: white;
-    width: 10%;
+    left: -250px;
+    right: 0;
+    width: 75px;
     height: 100vh;
+    transition: all ease-in-out 500ms;
 }
+
 .itemmenu .sidebar .fork{
     width: 35px;
     height: 35px;
@@ -36,14 +38,18 @@
     align-items: center;
     justify-content: center;
     width: 100%;
-    /* background-color: coral; */
-
+    background-color: #E5E5E5;
+    transition: all ease-in-out 500ms;
 }
 .itemmenu .product .prd{
     display: flex;
     flex-direction: column;
     /* background-color: cyan; */
     margin: 20px;
+    transition: 50ms;
+}
+.itemmenu .product .prd:hover{
+    transform: scale(1.1);
 }
 .itemmenu .product .prd img{
     width: 220px;
@@ -74,9 +80,7 @@
 .cart .cartid::-webkit-scrollbar {
     background:transparent;
 }
-/* .cart .cartid::-webkit-scrollbar-thumb{
-background:transparent !important;
-} */
+
 .cart .cartid .cartqty{
     height: 100vh;
     /* background-color: hsl(71, 57%, 50%); */
@@ -101,7 +105,6 @@ background:transparent !important;
     padding-right: 7px;
 }
 .cart .cartid .cartprd .row .cartname{
-    /* text-align: center; */
     margin-top: 10px;
     margin-bottom: 15px;
     font-family: 'Airbnb Cereal App', sans-serif;

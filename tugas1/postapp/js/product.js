@@ -30,9 +30,7 @@ const itemcart = ()=>{
         </div>
       </div>
       `
-      
     })
-    
 }
 
 const btnadd=(id)=>{
@@ -40,7 +38,6 @@ const btnadd=(id)=>{
   // untuk update tampilan ke fungsi itemcard sehingga bisa ditampilkan
   totalprice()
   itemcart()
-  
 }
 // menambah data qty jika ditemukan data ganda
 const add = (id)=>{
@@ -62,7 +59,6 @@ const add = (id)=>{
   })
   // masukin data dari var cartupdate kedalam cart
   cart = cartupdate
-  
 }
 const btnmin=(id)=>{
   min(id)
@@ -101,39 +97,19 @@ const min = (id)=>{
   const i = cart.findIndex((x=> x.id == id))
     if(cart[i].qty<=1){
       cart.splice([min],1)
-      gambarcadangan()
     }
     else{
       cart[i].qty -= 1
     }
-    itemcart()
 }
 
-// const kosong =()=>{
-//   if(cart.length === 0){
-//     gambarcadangan
-//   }
-// }
 const btndel=()=>{
   cart = []
   itemcart()
   totalprice()
-  if(cart.length === 0){
-    gambarcadangan()
-  }
-  
+  gambarcadangan()
 }
 
-// const del =(id)=>{
-//   const cartupdate = cart.filter((e)=>{
-//     if(e.id !== id){
-//       return e
-//     }
-//   })
-//   cart = cartupdate
-//   itemcart()
-//   totalprice()
-// }
 // mencari data ganda dengan fungsi cartchecker
 const cartchecker = (id)=>{
   const findid = cart.find((item)=>{
@@ -176,10 +152,20 @@ const addcart = (id) => {
     tampiltotal()
     itemcart() // memanggil fungsi itemcart
     totalprice()
-    
-    
-    
-    
+}
+let status = true
+const side =()=>{
+  
+  if(status == false){
+    document.getElementById("sb").style.left = "-250px";
+    document.getElementById("items").style.paddingLeft = "0px";
+    status = true;
+  }
+  else if(status == true){
+    document.getElementById("sb").style.left = "0px";
+    document.getElementById("items").style.paddingLeft = "75px";
+    status = false;
+  }
 }
 
 
